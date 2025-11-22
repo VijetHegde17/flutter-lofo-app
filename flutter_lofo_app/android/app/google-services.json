@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "436499923032",
+    "project_id": "lofo-app-65216",
+    "storage_bucket": "lofo-app-65216.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436499923032:android:48a5d0b6fbb38401a78a2d",
+        "android_client_info": {
+          "package_name": "com.example.flutter_lofo_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuRVzZJ5ncRGVJWIgQ7JVUJKCKE0vlAA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

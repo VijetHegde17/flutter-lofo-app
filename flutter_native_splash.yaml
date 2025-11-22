@@ -1,0 +1,53 @@
+flutter_native_splash:
+  # Background color - using the gradient top color
+  color: "#6A5AE0"
+  
+  # Optional: Use a background image with gradient
+  background_image: "assets/images/splash_background.png"
+  
+  # The image to use for the splash screen (clean logo without background)
+  image: "assets/images/splash_logo.png"
+  
+  # Branding image (optional - bottom of splash)
+  # branding: assets/images/branding.png
+  
+  # Color of the status bar (Android)
+  color_dark: "#6A5AE0"
+  
+  # Optional: Background image for dark mode
+  background_image_dark: "assets/images/splash_background.png"
+  
+  # Optional: Image for dark mode
+  image_dark: "assets/images/splash_logo.png"
+  
+  # Android 12+ specific settings
+  android_12:
+    # Image to use for Android 12+
+    image: "assets/images/splash_logo.png"
+    
+    # Icon background color for Android 12+
+    color: "#6A5AE0"
+    
+    # Optional: Image for dark mode on Android 12+
+    image_dark: "assets/images/splash_logo.png"
+    color_dark: "#6A5AE0"
+  
+  # Web settings
+  web: true
+  
+  # iOS settings
+  ios: true
+  
+  # Android settings
+  android: true
+  
+  # Set to true to keep splash screen until app is ready
+  android_gravity: center
+  ios_content_mode: center
+  
+  # Fullscreen mode
+  fullscreen: true
+  
+  # Info.plist settings for iOS
+  info_plist_files:
+    - 'ios/Runner/Info.plist'
