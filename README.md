@@ -22,7 +22,7 @@
 ## 👨‍💻 Author
 
 **Vijet Hegde**  
-BE in Computer Science  
+Pursuing BE in Computer Science and Design  
 Dayananda Sagar Academy of Technology and Management (DSATM)
 
 📧 Developer & Creator of this Lost & Found Application
