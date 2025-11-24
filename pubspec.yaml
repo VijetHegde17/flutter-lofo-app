@@ -33,12 +33,14 @@ dependencies:
 
   # Icons
   cupertino_icons: ^1.0.8
+  mockito: ^5.6.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
   flutter_native_splash: ^2.3.10
+  build_runner: ^2.10.4
 
 flutter:
   uses-material-design: true
