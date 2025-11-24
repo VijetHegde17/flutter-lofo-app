@@ -1,34 +1,29 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
+/// Simple AuthService wrapper around a Supabase client.
+/// The class intentionally keeps a minimal surface required for signup.
 class AuthService {
-  AuthService(this._firebaseAuth);
+  AuthService({required this.client});
 
-  final FirebaseAuth _firebaseAuth;
+  /// Use a dynamic client type to keep the wrapper small and easy to test.
+  final dynamic client;
 
-  Stream<User?> authStateChanges() => _firebaseAuth.userChanges();
-
-  User? get currentUser => _firebaseAuth.currentUser;
-
-  Future<UserCredential> signIn({
+  /// Sign up using Supabase auth with `email`, `password` and `username` stored
+  /// in the user metadata via the `data` parameter.
+  Future<dynamic> signUp({
     required String email,
     required String password,
-  }) {
-    return _firebaseAuth.signInWithEmailAndPassword(
+    required String username,
+  }) async {
+    final response = await client.auth.signUp(
       email: email,
       password: password,
+      data: {'username': username},
     );
+
+    return response;
   }
 
-  Future<UserCredential> signUp({
-    required String email,
-    required String password,
-  }) {
-    return _firebaseAuth.createUserWithEmailAndPassword(
-      email: email,
-      password: password,
-    );
-  }
-
-  Future<void> signOut() => _firebaseAuth.signOut();
+  /// Proxy to signOut for convenience.
+  Future<void> signOut() => client.auth.signOut();
 }
-
